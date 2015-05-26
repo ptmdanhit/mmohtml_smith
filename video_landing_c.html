@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+    <title>Cute Kitten Moments - playlist</title>
+
+    <link rel="shorcut icon" href="images/moment_icon.ico" type="images/moment_icon">
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.38677.js"></script>
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- jQuery -->
+</head>
+
+<body class="landing-body">
+    <div class="video_container">
+
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/oLIdShmlk9k?autoplay=1&start=31" frameborder="0" allowfullscreen></iframe>
+
+        <header>
+            <div class="header_container">
+                <div class="inner container_active">
+                    <!-- Back Button -->
+                    <div class="column column_1">
+                        <div class="column_inner container_active">
+                            <a class="button_back floatLeft" href="playlist.html"></a>
+                            <a class="button_back_highlight" href="javascript:void(0);"></a>
+                            <a class="profile floatRight">
+                                <img src="images/profile_user_image.png" alt="img">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- My Name -->
+                    <div class="column column_2 hide_mobile">
+                        <div class="column_inner">
+                            <h2 class="user_name">Explore Moments</h2>
+                        </div>
+                    </div>
+
+                    <div class="column column_3 hide_tablet">
+                        <a href="#" class="ir">text</a>
+                    </div>
+
+                    <!-- New Playlist -->
+                    <div class="column column_4 hide_small">
+                        <div class="column_inner">
+                            <a href="#" class="ir">text</a>
+                        </div>
+                    </div>
+
+                    <!-- Page Menu -->
+                    <div class="column column_5">
+                        <div class="column_inner column_menu_inner">
+                            <a href="http://dev.mpulsemedia.com/moment_html/index.html" class="button_generic button_save_private button_explore"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="main">
+            <!-- GRID -->
+        <div class="grid">
+            <div class="grid_container">
+                <div class="grid_container_inner">
+                    <div class="content container_active">
+                        <!-- BOOKMARK ITEM VIDEO-->
+                        <div class="column column_media column_bookmark bookmark_video">
+                            <div class="column_inner">
+
+                                <!-- Thumbnail -->
+                                <div class="media">
+                                    <a href="video_landing_a.html" class="thumbnail">
+                                        <img src="images/video_thumbnail_a.jpg" alt="thumbnail">
+                                    </a>
+                                    <a href="video_landing_a.html" class="media_title">
+                                        <h5>Next: LoL Auto-attack</h5>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div> <!-- content container_active-->
+                </div>
+            </div>
+        </div> <!-- grid -->
+        </div>
+        <!-- /#main -->
+    </div>
+    <!-- wapper_landing -->
+</body>
+<script>
+    jQuery(document).ready(function() {
+        if (Modernizr.touch) {}
+        else{
+            jQuery('.button_back').hover(function(){
+                jQuery(this).closest('.column_inner').find('.button_back_highlight').show();
+            }, function() {
+                jQuery(this).closest('.column_inner').find('.button_back_highlight').hide();
+            });
+        }
+    })
+</script>
+<script type='text/javascript'>
+    $('.bookmark_item_menu').each(function() {
+        $(this).load('templates/bookmark_item_menu.html', function() {
+            $('.page_menu').click(function() {
+                $(this).next().show();
+                return false;
+            })
+            $('.media_menu_touch_clickregion').click(function() {
+                $(this).closest('.column_inner').find('.media_menu_popup').show();
+                return false;
+            })
+            $('.button_close').click(function() {
+                $(this).parent().hide();
+
+            })
+            $('.button_back').hover(function(){
+                $(this).closest('.column_inner').find('.button_back_highlight').show();
+            }, function() {
+                $(this).closest('.column_inner').find('.button_back_highlight').hide();
+            });
+        });
+    });
+</script>
+
+</html>

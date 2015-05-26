@@ -1,0 +1,10 @@
+@mixin transition($prop, $s) {
+   -webkit-transition : $prop $s ease-in;
+      -moz-transition : $prop $s ease-in;
+       -ms-transition : $prop $s ease-in;
+        -o-transition : $prop $s ease-in;
+           transition : $prop $s ease-in;
+}
+@mixin text_shadow($blur, $color_shadow) {
+	text-shadow : 0 1px $blur $color_shadow;
+}
