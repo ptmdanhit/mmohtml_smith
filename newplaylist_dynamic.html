@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+    <title>New Playlist Dynamic</title>
+
+    <link rel="shorcut icon" href="images/moment_icon.ico" type="images/moment_icon">
+
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>
+        jQuery(document).ready(function() {
+            jQuery('.page_menu').click(function() {
+                jQuery(this).next().show();
+                return false;
+            })
+            jQuery('.media_menu_touch_circle').click(function() {
+                jQuery(this).next().show();
+                return false;
+            })
+            jQuery('.button_close').click(function() {
+                jQuery(this).parent().hide();
+
+            })
+        })
+    </script>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- jQuery -->
+</head>
+
+<body class="new_playlist">
+    <header>
+        <div class="header_container">
+            <div class="inner container_active">
+                <div class="column column_1">
+                    <div class="column_inner container_active">
+                        <a class="button_back floatLeft" href="profile.html"></a>
+                    </div>
+                </div>
+
+                <div class="column column_2and3">
+                    <div class="column_inner column_search_playlist_inner">
+                        <div class="search_form search_playlist">
+                            <form class="">
+                                <input type="search" placeholder="Playlist Title">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- column_2and3 -->
+
+                <div class="column column_4 hide_mobile">
+                    <a href="#" class="ir">text</a>
+                </div>
+                <!-- column_4 -->
+
+                <div class="column column_5 hide_tablet">
+                    <div class="column_inner">
+                        <a href="#" class="ir">text</a>
+                    </div>
+                </div>
+                <!-- column_5 -->
+            </div>
+        </div>
+        <!-- /.container header -->
+    </header>
+    <!-- /header -->
+
+    <div id="main">
+        <div class="introduction">
+            <div class="introduction_container">
+                <div class="introduction_container_inner container_active">
+                    <div class="column column_1and2">
+                        <div class="column_inner column_search_playlist_inner">
+
+                        </div>
+                    </div>
+                    <!-- column_1and2 -->
+                </div>
+            </div>
+        </div>
+
+        <div class="sub_header">
+            <div class="subheader_container">
+                <div class="subheader_container_inner">
+                    <div class="subheader_inner container_active">
+                        <div class="column column_1and2">
+                            <div class="column_inner">
+                                <div class="search_form">
+                                    <form id="form">
+                                        <input type="search" name="esearch" placeholder="Puppies">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- column_1and2 -->
+
+                        <div class="column column_3 hide_tablet"><a href="#" class="ir">text</a>
+                        </div>
+
+                        <div class="column column_4">
+                            <div class="column_inner column_menu_inner">
+                                <a href="profile_playlist.html" class="page_menu button_following10 button_save_private_content"></a>
+                            </div>
+                        </div>
+                        <!-- column_4 -->
+
+                        <div class="column column_5">
+                            <div class="column_inner">
+                                <a href="profile_playlist.html" class="button_generic button_follow button_publish"></a>
+                            </div>
+                        </div>
+                        <!-- column_5 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /sub_header -->
+
+        <div class="grid">
+            <div class="grid_container">
+                <div class="grid_container_inner">
+                    <div class="content container_active">
+                        <div class="column">
+                            <div class="column_inner">
+                                <div class="column_media column_bookmark">
+                                    <div class="media">
+                                        <a href="http://dev.mpulsemedia.com/moment_html/index.html" class="thumbnail"><img src="images/video_thumbnail_b.jpg" alt="thumbnail">
+                                        </a>
+
+                                        <span class="moment_count">1,234</span>
+
+                                        <a href="http://dev.mpulsemedia.com/moment_html/index.html" class="media_title"><h5>Highlight Reel</h5></a>
+                                    </div>
+                                    <!-- /media -->
+                                </div>
+                                <!-- /.column_media  column_bookmark-->
+                            </div>
+                            <!-- /.column_inner -->
+                        </div>
+                        <!-- /.column -->
+
+                        <div class="column">
+                            <div class="column_inner">
+                                <div class="column_media column_bookmark">
+                                    <div class="media">
+                                        <a href="http://dev.mpulsemedia.com/moment_html/index.html" class="thumbnail"><img src="images/video_thumbnail_b.jpg" alt="thumbnail">
+                                        </a>
+
+                                        <span class="moment_count">1,234</span>
+
+                                        <a href="http://dev.mpulsemedia.com/moment_html/index.html" class="media_title"><h5>Highlight Reel</h5></a>
+                                    </div>
+                                    <!-- /media -->
+                                </div>
+                                <!-- /.column_media  column_bookmark-->
+                            </div>
+                            <!-- /.column_inner -->
+                        </div>
+                        <!-- /.column -->
+
+                        <div class="column">
+                            <div class="column_inner">
+                                <div class="column_media column_bookmark">
+                                    <div class="media">
+                                        <a href="http://dev.mpulsemedia.com/moment_html/index.html" class="thumbnail"><img src="images/video_thumbnail_b.jpg" alt="thumbnail">
+                                        </a>
+
+                                        <span class="moment_count">1,234</span>
+
+                                        <a href="http://dev.mpulsemedia.com/moment_html/index.html" class="media_title"><h5>Highlight Reel</h5></a>
+                                    </div>
+                                    <!-- /media -->
+                                </div>
+                                <!-- /.column_media  column_bookmark-->
+                            </div>
+                            <!-- /.column_inner -->
+                        </div>
+                        <!-- /.column -->
+
+                        <div class="column">
+                            <div class="column_inner">
+                                <div class="column_media column_bookmark">
+                                    <div class="media">
+                                        <a href="http://dev.mpulsemedia.com/moment_html/index.html" class="thumbnail"><img src="images/video_thumbnail_b.jpg" alt="thumbnail">
+                                        </a>
+
+                                        <span class="moment_count">1,234</span>
+
+                                        <a href="http://dev.mpulsemedia.com/moment_html/index.html" class="media_title"><h5>Highlight Reel</h5></a>
+                                    </div>
+                                    <!-- /media -->
+                                </div>
+                                <!-- /.column_media  column_bookmark-->
+                            </div>
+                            <!-- /.column_inner -->
+                        </div>
+                        <!-- /.column -->
+
+                        <div class="column">
+                            <div class="column_inner">
+                                <div class="column_media column_bookmark">
+                                    <div class="media">
+                                        <a href="http://dev.mpulsemedia.com/moment_html/index.html" class="thumbnail"><img src="images/video_thumbnail_b.jpg" alt="thumbnail">
+                                        </a>
+
+                                        <span class="moment_count">1,234</span>
+
+                                        <a href="http://dev.mpulsemedia.com/moment_html/index.html" class="media_title"><h5>Highlight Reel</h5></a>
+                                    </div>
+                                    <!-- /media -->
+                                </div>
+                                <!-- /.column_media  column_bookmark-->
+                            </div>
+                            <!-- /.column_inner -->
+                        </div>
+                        <!-- /.column -->
+
+                        <div class="column">
+                            <div class="column_inner">
+                                <div class="column_media column_bookmark">
+                                    <div class="media">
+                                        <a href="http://dev.mpulsemedia.com/moment_html/index.html" class="thumbnail"><img src="images/video_thumbnail_b.jpg" alt="thumbnail">
+                                        </a>
+
+                                        <span class="moment_count">1,234</span>
+
+                                        <a href="http://dev.mpulsemedia.com/moment_html/index.html" class="media_title"><h5>Highlight Reel</h5></a>
+                                    </div>
+                                    <!-- /media -->
+                                </div>
+                                <!-- /.column_media  column_bookmark-->
+                            </div>
+                            <!-- /.column_inner -->
+                        </div>
+                        <!-- /.column -->
+                    </div>
+                    <!-- /.content container_active-->
+                </div>
+            </div>
+        </div>
+        <!-- /.grid -->
+    </div>
+    <!-- /#main -->
+
+    <footer>
+    </footer>
+    <!-- /footer -->
+</body>
+
+</html>

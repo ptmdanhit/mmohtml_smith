@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+    <title>New Playlist</title>
+
+    <link rel="shorcut icon" href="images/moment_icon.ico" type="images/moment_icon">
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.38677.js"></script>
+
+    <!-- jQuery UI  -->
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
+
+    <!-- Owl Carousel & Gridly package -->
+    <link rel="stylesheet" href="css/owl/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl/owl.theme.css">
+    <link rel='stylesheet' href='css/jquery.gridly/jquery.gridly.css' type='text/css' media='all' />
+    <script src="js/owl/owl.carousel.js"></script>
+    <script src="js/jquery.gridly/jquery.gridly.js"></script>
+
+    <!-- Our Carousel extension -->
+    <script type="text/javascript" src="js/moment/carousel.js"></script>
+    <!-- Our Moment extension -->
+    <script type="text/javascript" src="js/moment/moment.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- jQuery -->
+</head>
+
+<body class="new_playlist">
+
+    <header>
+        <!-- HEADER -->
+        <div class="header_container">
+            <div class="inner container_active">
+
+                <!-- Back Button -->
+                <div class="column column_1">
+                    <div class="column_inner container_active">
+                        <a class="button_back button_back_full floatLeft" href="profile_playlist.html"></a>
+                        <a class="button_back_highlight button_back_highlight_full floatLeft" href="javascript:void(0);"></a>
+                    </div>
+                </div>
+
+                <div class="column column_2 hide_tablet">
+                    <a href="#" class="ir">text</a>
+                </div>
+
+                <!-- Playlist Title -->
+                <div class="column column_3and4">
+                    <div class="column_inner column_search_playlist_inner">
+                        <div class="search_form search_playlist">
+                            <form class="">
+                                <input type="search" placeholder="Playlist Title">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publish -->
+                <div class="column column_5">
+                    <div class="column_inner column_menu_inner">
+                        <a href="profile_playlist.html" class="button_generic button_publish"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>  <!-- header_container -->
+
+        <!-- INTRODUCTION -->
+        <div class='introduction'></div>
+
+    </header> <!-- header -->
+
+    <div id="main">
+
+        <!-- PLAYLISST SEQUENCE -->
+        <div class="playlist_sequence">
+            <div class="button_left"></div>
+            <div class="playlist_sequence_container">
+                <div id="playlist_carousel" class="playlist_sequence_container_inner container_active owl-carousel"></div>
+            </div>
+            <div class="button_right"></div>
+        </div> <!-- playlist_sequence -->
+
+        <!-- SUB-HEADER -->
+        <div class="sub_header">
+            <div class="subheader_container">
+                <div class="subheader_container_inner">
+                    <div class="subheader_inner container_active">
+
+                        <!-- Search -->
+                        <div class="column column_1and2">
+                            <div class="column_inner">
+                                <div class="search_form">
+                                    <form id="form">
+                                        <input type="search" name="esearch" placeholder="search">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column column_3">
+                            <div class="column_inner column_menu_inner">
+                                <!-- Reorder -->
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox sort" id="myonoffswitch" checked>
+                                    <label class="onoffswitch-label" for="myonoffswitch">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column column_4 hide_mobile">
+                            <a href="#" class="ir">text</a>
+                        </div>
+
+                        <div class="column column_5">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> <!-- sub_header -->
+
+        <!-- GRID -->
+        <div class="grid">
+            <div class="grid_container">
+                <div class="grid_container_inner">
+                    <div class="content container_active">
+                        <div class='bookmark_item_menu_without_touch' data-image="video_thumbnail_a.jpg" data-title="Title #1" data-id='1'></div>
+                        <div class='bookmark_item_menu_without_touch' data-image="video_thumbnail_b.jpg" data-title="Title #2" data-id='2'></div>
+                        <div class='bookmark_item_menu_without_touch' data-image="video_thumbnail_c.jpg" data-title="Title #3" data-id='3'></div>
+                        <div class='bookmark_item_menu_without_touch' data-image="video_thumbnail_d.jpg" data-title="Title #4" data-id='4'></div>
+                        <div class='bookmark_item_menu_without_touch' data-image="video_thumbnail_e.jpg" data-title="Title #5" data-id='5'></div>
+                        <div class='bookmark_item_menu_without_touch' data-image="video_thumbnail_f.jpg" data-title="Title #6" data-id='6'></div>
+                        <div class='bookmark_item_menu_without_touch' data-image="video_thumbnail_g.jpg" data-title="Title #7" data-id='7'></div>
+                        <div class='bookmark_item_menu_without_touch' data-image="video_thumbnail_h.jpg" data-title="Title #8" data-id='8'></div>
+                        <div class='bookmark_item_menu_without_touch' data-image="video_thumbnail_i.jpg" data-title="Title #9" data-id='9'></div>
+                        <div class='bookmark_item_menu_without_touch' data-image="video_thumbnail_a.jpg" data-title="Title #10" data-id='10'></div>
+                        <div class='bookmark_item_menu_without_touch' data-image="video_thumbnail_b.jpg" data-title="Title #11" data-id='11'></div>
+                        <div class='bookmark_item_menu_without_touch' data-image="video_thumbnail_c.jpg" data-title="Title #12" data-id='12'></div>
+                        <div class='bookmark_item_menu_without_touch' data-image="video_thumbnail_d.jpg" data-title="Title #13" data-id='13'></div>
+                        <div class='bookmark_item_menu_without_touch' data-image="video_thumbnail_f.jpg" data-title="Title #14" data-id='14'></div>
+                        <div class='bookmark_item_menu_without_touch' data-image="video_thumbnail_g.jpg" data-title="Title #15" data-id='15'></div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- grid -->
+    </div> <!-- main -->
+
+    <footer>
+    </footer>
+    <script>
+
+        // We create callback function that will pick up how
+        // elements changed after successful reorder.
+        var reordered = function($elements) {
+          sortedElements = [];
+          $elements.each(function() {
+            sortedElements.push($(this).html());
+          });
+        };
+
+        function orderize(el) {
+            // Play with classes to hide/show elements.
+            el.addClass('reorder').removeClass('sort');
+            $('#playlist_carousel .instruction').parent().remove();
+            $('.button_left, .button_right').hide();
+
+            // Bookmarks should no be clickable
+            carousel.disableEvents('off', '.bookmark_item_menu_without_touch');
+
+            owl.data('owlCarousel').reinit({
+                 touchDrag  : false,
+                 mouseDrag  : false,
+                 responsive : false
+             });
+
+            var mediaWidth = moment.getMediaSize('width');
+            var gridSize = moment.getGrid();
+            $('.owl-item').attr("style", "width: " + mediaWidth + "px");
+            $('#playlist_carousel .owl-wrapper').gridly({
+                base: mediaWidth, // px 
+                gutter: 15, // px
+                columns: gridSize,
+              callbacks: { reordered: reordered }
+            });
+
+            
+
+            // Hide buttons so removing items from GRID wont be possible.
+            $('.button_remove_from_playlist').hide();
+        } 
+
+        $(document).ready(function() {
+            var sortedElements = [];
+            var sortedElementsDataIds = [];
+
+            $('.onoffswitch-checkbox').on("click tap", function() {
+                if($(this).hasClass('sort')) {
+                    var thisEl = $(this);
+                    var resizeTimeout;
+                    $( window ).resize(function() {
+                        clearTimeout(resizeTimeout);
+                        resizeTimeout = setTimeout(function() {
+                            orderize(thisEl);
+                        }, 50);
+                    });
+                    orderize(thisEl);
+
+                } else if ($(this).hasClass('reorder')) {
+                    carousel.disableEvents('on');
+                    $(window).off("resize");
+
+                    // Play with classes to hide/show elements.
+                    $(this).addClass('sort').removeClass('reorder');
+                    $('.button_left, .button_right').show();
+
+                    // If the soredElements array is present, it means that
+                    // the order has changed.
+                    if (typeof sortedElements[0] !== 'undefined') {
+                        // If order has changed, we destroy current owl Carousel
+                        $('#playlist_carousel .bookmark_item_menu_without_touch').parent().remove();
+
+                        // And reinitialize it with none elements.
+                        owl.data('owlCarousel').reinit({
+                             touchDrag  : true,
+                             mouseDrag  : true,
+                             responsive : true
+                         });
+
+                        // Now we append all the elements that were stored inside sortedElements,
+                        // to see what is sortedElements see the "var reordered".
+                        count = sortedElements.length;
+                        $.each(sortedElements, function(index, element) {
+                            owl.data('owlCarousel').addItem(element);
+                            var $el = $('#playlist_carousel .bookmark_item_menu_without_touch[data-id="'+$(element).data('id')+'"]');
+                            carousel.bindDeleteAction($el, owl, '.bookmark_item_menu_without_touch');
+                            if(!--count) {
+                                sortedElements = [];
+                            }
+                        });
+
+                        // Reinitialize array when all elements are added and the
+                        // owlCarousel was stripped out of any leftovers.
+                        $('.owl-item .owl-wrapper-outer').parent().remove();
+                        $('.owl-item .bookmark_item_menu_without_touch.hidden').parent().remove();
+                        owl.data('owlCarousel').reinit({
+                             touchDrag  : true,
+                             mouseDrag  : true,
+                             responsive : true
+                         });
+
+                    } else {
+                        // If the sortedElements wasn't present, it means that order hasn't change
+                        // do nothing but reinitialization of array with disabled events.
+                        owl.data('owlCarousel').reinit({
+                             touchDrag  : true,
+                             mouseDrag  : true,
+                             responsive : true
+                         });
+                    }
+
+                    $('#playlist_carousel .owl-wrapper').gridly('draggable', 'off');
+
+                    // Show buttons so removing items from GRID will be possible.
+                    $('.button_remove_from_playlist').show();
+                    carousel.applyAppendix(owl);
+                }
+            });
+        });
+
+        $('#playlist_carousel').load('templates/playlist_stub_items.html', function() {
+            // Init carousel after stubs are loaded.
+            owl = $('#playlist_carousel').owlCarousel({
+                navigation : false,
+                scrollPerPage : false,
+                rewindNav : false,
+                pagination : false,
+                rewindNav : false,
+                items : 5, // 5 items
+                itemsDesktop : [1000,6], //5 items between 1000px and 901px
+                itemsDesktopSmall : [900,4], // betweem 900px and 601px
+                itemsTablet: [600,3], //2 items between 600 and 480
+                itemsMobile: [480,2], //2 items between 480 and 0
+            });
+            carousel.init(function(){
+                carousel.enableKeyDowns(owl);
+                carousel.enableEvents(owl, '.bookmark_item_menu_without_touch');
+                carousel.bindCustomNavigation(owl,
+                    '.button_left',
+                    '.button_right'
+                );
+            });
+        });
+
+    </script>
+    <script type='text/javascript'>
+        moment.loadResource('js/templates/introduction.js', 'js');
+        moment.loadResource('js/templates/bookmark.item.menu.without.touch.js', 'js');
+    </script>
+
+</body>
+</html>

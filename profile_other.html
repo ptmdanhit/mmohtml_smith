@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+    <title>Fred</title>
+
+    <link rel="shorcut icon" href="images/moment_icon.ico" type="images/moment_icon">
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.38677.js"></script>
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- jQuery -->
+</head>
+
+<body class="profile_other">
+
+    <header>
+        <!-- HEADER -->
+        <div class="header_container">
+            <div class="inner container_active">
+
+                <!-- Back Button -->
+                <div class="column column_1">
+                    <div class="column_inner container_active">
+                        <a class="button_back floatLeft" href="playlist.html"></a>
+                        <a class="button_back_highlight" href="javascript:void(0);"></a>
+                        <a class="profile floatRight">
+                            <img src="images/profile_user_image2.png" alt="img">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Other Name -->
+                <div class="column column_2">
+                    <div class="column_inner">
+                        <h2 class="user_name">Fred</h2>
+                    </div>
+                </div>
+
+                <div class="column column_3 hide_mobile">
+                    <a href="#" class="ir">text</a>
+                </div>
+
+                <div class="column column_4 hide_tablet">
+                    <a href="#" class="ir">text</a>
+                </div>
+
+                <!-- Page Menu -->
+                <div class="column column_5">
+                    <div class="column_inner column_menu_inner">
+
+                        <a href="#" class="page_menu">
+                            <button type="button" class="menu_bar_group">
+                                <span class="menu_bar"></span>
+                                <span class="menu_bar"></span>
+                                <span class="menu_bar"></span>
+                            </button>
+                        </a>
+                        <div class="page_menu_popup" style="display: none;">
+                            <a href="javascript:void(0);" class="button_close"></a>
+                            <ul class="page_menu_popup_list">
+                                <li class="page_menu_popup_list_small_screen">
+                                    <a href="new_playlist.html">Follow 10</a>
+                                </li>
+                                <li><a href="#">20 Followers </a></li>
+                                <li><a href="#">Report Issue </a></li>
+                                <li><a href="#">Block        </a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div> <!-- container header -->
+
+
+        <!-- INTRODUCTION -->
+        <div class='introduction'></div>
+
+    </header> <!-- header -->
+
+    <div id="main">
+
+        <!-- SUB HEADER -->
+        <div class="sub_header">
+            <div class="subheader_container">
+                <div class="subheader_container_inner">
+                    <div class="subheader_inner container_active">
+
+
+                        <!-- Search -->
+                        <div class="column column_1and2">
+                            <div class="column_inner">
+                                <div class="search_form">
+                                    <form id="form">
+                                        <input type="search" name="esearch" placeholder="search">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column column_3 hide_tablet"><a href="#" class="ir">text</a>
+                        </div>
+
+                        <!-- Follow -->
+                        <div class="column column_4">
+                            <div class="column_inner">
+                                <a href="#" class="button_generic button_follow"></a>
+                            </div>
+                        </div>
+
+                        <!-- Following -->
+                        <div class="column column_5">
+                            <div class="column_inner column_menu_inner">
+                                <a href="#" class="button_generic button_following10"></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> <!-- sub_header -->
+
+        <!-- GRID -->
+        <div class="grid">
+            <div class="grid_container">
+                <div class="grid_container_inner">
+                    <div class="content container_active">
+
+                        <div class='playlist_item_menu'></div>
+                        <div class='playlist_item_menu'></div>
+                        <div class='playlist_item_menu'></div>
+                        <div class='playlist_item_menu'></div>
+                        <div class='playlist_item_menu'></div>
+
+                    </div>
+                </div>
+            </div>
+        </div> <!-- grid -->
+    </div> <!-- main -->
+
+    <footer>
+        <script>
+            jQuery(document).ready(function() {
+                jQuery('.page_menu').click(function() {
+                    jQuery(this).next().show();
+                    return false;
+                })
+                jQuery('.media_menu_touch_clickregion').click(function() {
+                    jQuery(this).closest('.column_inner').find('.media_menu_popup').show();
+                    return false;
+                })
+                jQuery('.button_close').click(function() {
+                    jQuery(this).parent().hide();
+
+                })
+                if (Modernizr.touch) {}
+                else{
+                    jQuery('.button_back').hover(function(){
+                        jQuery(this).closest('.column_inner').find('.button_back_highlight').show();
+                    }, function() {
+                        jQuery(this).closest('.column_inner').find('.button_back_highlight').hide();
+                    });
+                }
+            })
+        </script>
+        <script type='text/javascript'>
+            $('.introduction').each(function() {
+                $(this).load('templates/introduction.html', function() {
+                    $("#close_title").on("click tap", function(event) {
+                        event.preventDefault();
+                        $('.introduction').hide();
+                    });
+                });
+            });
+        </script>
+        <script type='text/javascript'>
+            $('.playlist_item_menu').each(function() {
+                $(this).load('templates/playlist_item_menu.html', function() {
+                    $('.media_menu_touch_clickregion').click(function() {
+                        $(this).closest('.column_inner').find('.media_menu_popup').show();
+                        return false;
+                    });
+                    $('.media').mouseover(function(){
+                        $(this).closest('.column_inner').css({'z-index':'11'});
+                        $(this).closest('.column_inner').find('.media_menu_touch_circle').show();
+                        $(this).closest('.column_inner').find('.media_menu_touch_circle').css({'border':'2px solid #fff'});
+                    });
+                    $('.column_inner').mouseleave(function() {
+                        $(this).css({'z-index':'10'});
+                        $(this).find('.media_menu_touch_circle').hide();
+                        $(this).find('.media_menu_touch_circle').css({'border':'none'});
+                        $(this).closest('.column_inner').find('.media_menu_popup').hide();
+                    });
+                    $('.media_menu_touch_circle').hover(function(){
+                        $(this).closest('.column_inner').find('.media_menu_popup').show();
+                    });
+                     $('.button_close').click(function() {
+                        $(this).parent().hide();
+                    });
+                });
+            });
+        </script>
+    </footer>
+
+</body>
+</html>
