@@ -136,14 +136,10 @@
     .media {
         z-index : 10;
     }
-    .media_menu_touch_clickregion {
-        display : block;
-    }
     .content .column .media_menu_touch_circle {
         right   : $media_menu_touch_circle_right;
         bottom  : $media_menu_touch_circle_bottom;
         left    : auto;
-        display : block;
         z-index: $media_menu_touch_circle_z_index;
     }
     .media_menu_popup {
@@ -172,23 +168,23 @@
     .column.column_3and4 {
         width     : $column_1and2_width_mobile;
         .column_inner {
-            width : $column_inner_width;
+            width : $media_width_mouse;
         }
     }
     .new_playlist .column.column_1and2 {
-    	width     : $column_4and5_width_mobile;
-    	.column_inner {
-            width : $column_1and2_inner_width;
+        width     : $column_4and5_width_mobile;
+        .column_inner {
+            width : $media_width_mouse_1and2;
         }
     }
     .content .column.column_media .column_inner {
-        width : $content_column_inner_touch_mode_width;
+        width : $media_width_touch;
     }
     .content .column.column_media.column_bookmark .column_inner {
-        width     : $column_inner_width;
+        width     : $media_width_mouse;
 
         .profile-history-body & {
-            width : $content_column_inner_touch_mode_width;
+            width : $media_width_touch;
         }
     }
 
@@ -236,13 +232,13 @@
         width      : $column_3and4_width_small;
         margin-top : $padding_vertical_default;
         .column_inner {
-            width  : $column_3and4_inner_width;
+            width  : $media_width_mouse_3and4;
         }
     }
     .new_playlist header .column.column_2and3 {
         width     : $column_width_small;
         .column_inner.column_search_playlist_inner {
-            width : $column_inner_width;
+            width : $media_width_mouse;
         }
     }
     header .column.column_5 {
@@ -256,16 +252,16 @@
     .sub_header .column.column_4and5 {
         width             : $column_4and5_width_small;
         .column_inner {
-            width         : $column_inner_width;
+            width         : $media_width_mouse;
             .radio_button .button_history, .radio_button .button_playlist {
                 font-size : $profile_switcher_size_small;
             }
         }
     }
     .new_playlist .column.column_1and2 {
-    	width     : $column_4and5_width_small;
-    	.column_inner {
-            width : $column_inner_width;
+        width     : $column_4and5_width_small;
+        .column_inner {
+            width : $media_width_mouse;
         }
     }
 

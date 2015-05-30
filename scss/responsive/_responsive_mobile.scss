@@ -1,0 +1,100 @@
+
+//////////////////////////////////////////////////////////
+// Mobile screen size
+//////////////////////////////////////////////////////////
+
+//Logo, page_title, search box, Button font-size
+h1.logo a,
+h2.page_title,
+.search_form form input[type="search"],
+.button_generic,
+.button_history,
+.page_menu,
+.button_save,
+.playlist_new,
+.profile h2,
+.introduction h3 {
+    font-size : $text_font_size_normal_mobile;
+}
+
+// Media
+.media {
+    .moment_count {
+        font-size     : $text_font_size_small_mobile;
+        padding       : $moment_count_padding_mobile;
+    }
+    .media_title {
+        min-height    : $text_font_size_normal_mobile * $media_title_min_height_line_multiple;
+        h5 {
+            font-size : $text_font_size_normal_mobile;
+        }
+    }
+}
+.column_media.column_bookmark .media .media_title h5 {
+    font-size : $text_font_size_normal_mobile;
+    padding   : 0;
+}
+.media {
+    z-index : 10;
+}
+.content .column .media_menu_touch_circle {
+    right   : $media_menu_touch_circle_right;
+    bottom  : $media_menu_touch_circle_bottom;
+    left    : auto;
+    z-index: $media_menu_touch_circle_z_index;
+}
+.media_menu_popup {
+    width : $media_menu_popup_width_touch;
+}
+.media .moment_count {
+    padding : $moment_count_padding_mobile;
+}
+.playlist_view_count {
+    font-size : $text_font_size_small_mobile;
+}
+
+// Grid (columns and rows)
+//Column hide
+.hide_mobile {
+    display : none;
+}
+.column {
+    width: $column_width_mobile;
+}
+.column.column_4and5,
+.column.column_2and3 {
+    width     : $column_4and5_width_mobile;
+}
+.column.column_1and2,
+.column.column_3and4 {
+    width     : $column_1and2_width_mobile;
+    .column_inner {
+        width : $media_width_mouse;
+    }
+}
+.new_playlist .column.column_1and2 {
+    width     : $column_4and5_width_mobile;
+    .column_inner {
+        width : $media_width_mouse_1and2;
+    }
+}
+.content .column.column_media .column_inner {
+    width : $media_width_touch;
+}
+.content .column.column_media.column_bookmark .column_inner {
+    width     : $media_width_mouse;
+
+    .profile-history-body & {
+        width : $media_width_touch;
+    }
+}
+
+//Introduction
+.introduction .introduction_container_inner h3 {
+    font-size : $text_font_size_big_mobile;
+}
+
+// button_back
+.button_back {
+    font-size : $text_font_size_normal_mobile;
+}

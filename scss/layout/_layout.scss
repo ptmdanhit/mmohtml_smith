@@ -32,7 +32,7 @@ body {
     @extend .container;
 }
 #main {
-    background       : $main_background_color;
+    background       : $main_background_image;
     background-size  : cover;
 }
 
@@ -309,11 +309,7 @@ button.menu_bar_group {
         font-weight : bold;
     }
 }
-// Remove From Playlist Button
-.button_remove_from_playlist {
-    @extend .button_close;
-    cursor: pointer !important;
-}
+
 
 ////////////////////////////////////
 // Introduction
@@ -372,7 +368,7 @@ button.menu_bar_group {
         width : $column_1and2_width_full;
     }
     .column_inner {
-        width          : $column_inner_width;
+        width          : $media_width_mouse;
         position       : relative;
         margin         : 0 auto;
         header .column_4 & {
@@ -393,16 +389,16 @@ button.menu_bar_group {
     float : right;
 }
 .column.column_4and5 .column_inner {
-    width : $column_4and5_inner_width;
+    width : $media_width_mouse_4and5;
 }
 .column.column_1and2 .column_inner {
-    width : $column_1and2_inner_width;
+    width : $media_width_mouse_1and2;
 }
 .column.column_2and3 .column_inner {
-    width : $column_4and5_inner_width;
+    width : $media_width_mouse_4and5;
 }
 .column.column_3and4 .column_inner {
-    width : $column_4and5_inner_width;
+    width : $media_width_mouse_4and5;
 }
 //////////////////////////////////////////////////////////
 // Media, Playlists and Moments
@@ -449,7 +445,7 @@ button.menu_bar_group {
         left             : 0px;
         background-color : $color_black_50_transparent;
         width            : 100%;
-        min-height       : $text_font_size_normal_full * $media_title_min_height_line_multiple; // PDS
+        min-height       : $text_font_size_normal_full * $media_title_min_height_line_multiple;
         h5 {
             line-height  : $media_title_line_height;
             font-size    : $text_font_size_normal_full;
@@ -532,6 +528,7 @@ button.menu_bar_group {
     vertical-align        : middle;
     z-index               : $media_menu_touch_circle_z_index;
     box-sizing            : content-box;
+    @include transition(all, $transition_duration);
     button.menu_bar_group {
         position : static;
     }
@@ -812,10 +809,10 @@ h2.user_name {
         }
     }
 }
-.bookmark_video {
+.bookmark_next {
     .media {
         &:hover {
-        box-shadow: 0 0 0 $button_generic_highlight_border_width $bookmark_video_highlight_color;
+        box-shadow: 0 0 0 $button_generic_highlight_border_width $color_blue;
     }
     }
 }
@@ -827,6 +824,139 @@ h2.user_name {
         content: $button_explore_content;
     }
 }
+
+// Register Page
+.register_div {
+    width: $register_div_width;
+    margin: $register_div_margin;
+    background-color: $register_div_background_color;
+    font-size: $text_font_size_normal_small;
+    padding: $register_div_padding;
+    h2 {
+        margin: $register_title_margin;
+        font-size: $text_font_size_normal_full;
+        line-height: $introduction_text_line_height;
+        color: $color_black;
+    }
+    a {
+        cursor: pointer;
+        color: $color_blue;
+        text-decoration: none;
+    }
+    p {
+        clear: both;
+        margin-bottom: $register_text_margin_bottom;
+    }
+    input {
+        margin: $register_input_margin;
+        padding: $register_input_padding;
+    }
+    #openid-buttons {
+
+    }
+    .preferred-login {
+
+    }
+    #more-options-link {
+
+    }
+}
+.preferred-login {
+    background: $preferred_login_background;
+    width: $preferred_login_width;
+    border: $preferred_login_border;
+    box-shadow: $preferred_login_shadow;
+    color: $preferred_login_color;
+    padding: $preferred_login_padding;
+    margin-bottom: $preferred_login_margin_bottom;
+    cursor: pointer;
+    height: $preferred_login_height;
+}
+.preferred-login .icon {
+    background: $preferred_login_icon_google_background;
+    width: $preferred_login_icon_width;
+    height: $preferred_login_icon_height;
+    display: inline-block;
+    margin-right: $preferred_login_icon_margin_right;
+    vertical-align: middle;
+}
+.preferred-login p > span {
+    vertical-align: middle;
+}
+.preferred-login.facebook-login .icon {
+    background: $preferred_login_icon_facebook_background;
+}
+.preferred-login#email-login {
+    height: auto;
+}
+.preferred-login .icon.email-signup {
+    background: $preferred_login_icon_email_background;
+}
+.register_div #email-login .form-bottom > div > input {
+    width: $form_bottom_input_width;
+}
+.register_div #email-login .form-bottom > div > input[type="text"], .register_div #email-login .form-bottom > div > input[type="email"], .register_div #email-login .form-bottom > div > input[type="password"] {
+    line-height: normal;
+    padding: $register_input_padding;
+    border: $form_bottom_input_border;
+}
+.form-submit {
+    padding: $form_submit_padding;
+    display: block;
+    #submit-button {
+        width: $submit_button_width;
+        cursor: pointer;
+        display: inline-block;
+        color: $white_color_2;
+        line-height: $submit_button_line_height;
+        padding: $submit_button_padding;
+        background: $submit_button_background;
+        @include transition(all, $transition_duration);
+        border: $submit_button_border;
+        box-shadow: $submit_button_box_shadow;
+        border-radius: $submit_button_border_radius;
+    }
+}
+
+.privacy-policy-agreement {
+    font-style: italic;
+}
+.message.message-info {
+    z-index: $message_info_z_index;
+    display: none;
+    color: $white_color_2;
+    background-color: $color_blue;
+    text-align: left;
+    font-size: $text_font_size_normal_small;
+    right: $message_info_right;
+    top: $message_info_top;
+    width: $message_info_width;
+    display: none;
+    position: absolute;
+}
+.message.message-info .message-tip-left-top::before {
+    top: $message_info_before_top;
+    left: -$message_info_before_border;
+    border-top: $message_info_before_border $button_generic_border_style $color_blue;
+    border-left: $message_info_before_border $button_generic_border_style $color_transparent;
+}
+.message.message-info .message-tip::before {
+    content: "";
+    position: absolute;
+}
+.message.message-info .message-text {
+    padding: $message_info_message_text_padding;
+}
+.message.message-info ul {
+    margin-left: $message_info_message_text_ul_margin_left;
+    padding: $message_info_message_text_ul_padding;
+    list-style: outside none disc;
+}
+.message.message-info ul li {
+    margin: $message_info_message_text_li_margin;
+    padding: $message_info_message_text_li_padding;
+}
+
 // Carousel
 .column.column_carousel {
     .column_inner {

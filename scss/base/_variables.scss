@@ -9,10 +9,9 @@ $color_off_white  : #ccc;
 $color_gray_light : #C8C8C8;
 $color_gray       : #929292;
 $color_gray_dark  : #494949;
-$color_blue			: #3399FF;
 $color_black      : #000;
 $color_green      : #38761D;
-$color_red        : #ff0011;
+$color_blue		  : #3399FF;
 $color_black_50_transparent : rgba(0, 0, 0, 0.5);
 $color_black_80_transparent : rgba(0, 0, 0, 0.2);
 $color_transparent          : transparent;
@@ -69,7 +68,6 @@ $button_generic_border_radius          : 5px;
 $button_generic_border_style           : solid;
 $button_generic_highlight_border_width : 2px;
 $button_generic_highlight_color        : $color_white;
-$bookmark_video_highlight_color        : $color_blue;
 
 $button_login_content          : "Log In";
 $button_reorder_content        : "Reorder";
@@ -173,23 +171,23 @@ $column_4and5_width_tablet : 100%*1/2;
 $column_4and5_width_mobile : 100%*2/3;
 $column_4and5_width_small  : 100%*1/2;
 
-$column_inner_width        : 90%; // Danh, why is this different?
-$column_4and5_inner_width  : 95%; // when one column mod then it is 90% when 2 columns then it must 95%
-$column_1and2_inner_width  : 95%;
-$column_3and4_inner_width  : 95%;
-
-$content_column_inner_touch_mode_width : 78%;
-
 //////////////////////////////////////////////////////////
 // Media, Playlists and Moments
 //////////////////////////////////////////////////////////
 
 ////////////////////////////////////
 //  Media
-$media_title_line_height              : 1.1;
-$media_title_min_height_line_multiple : 2;
-$media_title_padding_horizontal       : 2%;
-$media_title_padding_along            : 2%;
+
+$media_width_mouse       : 90%; // Danh, why is this different?
+$media_width_mouse_1and2 : 95%;
+$media_width_mouse_3and4 : 95%;
+$media_width_mouse_4and5 : 95%; // when one column mod then it is 90% when 2 columns then it must 95%
+$media_width_touch       : 78%;
+
+$media_title_line_height               : 1.1;
+$media_title_min_height_line_multiple  : 2;
+$media_title_padding_horizontal        : 2%;
+$media_title_padding_along             : 2%;
 
 ////////////////////////////////////
 //  Playlist
@@ -406,3 +404,55 @@ $w1199_no_touch_thumbnail_slider_bxslider_li_space_right        : 3%;
 $w1199_no_touch_thumbnail_slider_media_media_title_padding      : 3px;
 $w1199_no_touch_thumbnail_slider_media_media_title_heading_font : 15px;
 $w1199_thumbnail_slider_bx_wrapper_width                        : 91%;
+
+
+// Register
+$white_color_2: #fff;
+$register_div_width: 400px;
+$register_div_margin: 0 auto;
+$register_div_background_color: $white_color_2;
+$register_div_padding: 5px;
+$register_title_margin: 20px 0;
+$register_text_margin_bottom: 1em;
+$register_input_margin: 5px 0px;
+$register_input_padding: 3px;
+
+$preferred_login_background: #F9F9F9 none repeat scroll 0% 0%;
+$preferred_login_width: 258px;
+$preferred_login_border: 1px $button_generic_border_style #D4D4D4;
+$preferred_login_shadow: -1px 1px #F2F2F2;
+$preferred_login_color: #888;
+$preferred_login_padding: 7px;
+$preferred_login_margin_bottom: 15px;
+$preferred_login_height: 16px;
+
+$preferred_login_icon_google_background: url("../images/google.png") no-repeat 0 0;
+$preferred_login_icon_facebook_background: url("../images/facebook.png") no-repeat 0 0;
+$preferred_login_icon_email_background: url("../images/email.png") no-repeat 0 0;
+$preferred_login_icon_width: 16px;
+$preferred_login_icon_height: 16px;
+$preferred_login_icon_margin_right: 12px;
+
+$form_bottom_input_width: 250px;
+$form_bottom_input_border: 1px solid #999;
+$form_submit_padding: 10px 0px 15px;
+$submit_button_width: auto !important;
+$submit_button_line_height: 1;
+$submit_button_padding: 0.6em 0.8em;
+$submit_button_background: $color_blue none repeat scroll 0% 0%;
+$submit_button_border: $button_generic_highlight_border_width/2 $button_generic_border_style #1777B7;
+$submit_button_box_shadow: 0px 1px 0px rgba(255, 255, 255, 0.3) inset, 0px 1px 1px rgba(100, 100, 100, 0.3);
+$submit_button_border_radius: 3px;
+
+$message_info_z_index: 1;
+$message_info_right: -205px;
+$message_info_top: 12px;
+$message_info_width: 200px;
+$message_info_before_top: 0px;
+$message_info_before_border: 9px;
+
+$message_info_message_text_padding: 15px;
+$message_info_message_text_ul_margin_left: 15px;
+$message_info_message_text_ul_padding: 0;
+$message_info_message_text_li_margin: 0px 0px 5px;
+$message_info_message_text_li_padding: 0;

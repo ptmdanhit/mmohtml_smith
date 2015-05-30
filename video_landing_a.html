@@ -5,12 +5,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 
-    <title>Cute Kitten Moments - playlist</title>
+    <title>Highlight Reel</title>
 
     <link rel="shorcut icon" href="images/moment_icon.ico" type="images/moment_icon">
     <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/modernizr.custom.38677.js"></script>
+
+    <!-- Our Moment extension -->
+    <script type="text/javascript" src="js/moment/moment.js"></script>
+
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -39,7 +43,7 @@
                     <!-- My Name -->
                     <div class="column column_2 hide_mobile">
                         <div class="column_inner">
-                            <h2 class="user_name">Explore Moments</h2>
+                            <h2 class="user_name">Highlight Reel</h2>
                         </div>
                     </div>
 
@@ -71,7 +75,7 @@
                 <div class="grid_container_inner">
                     <div class="content container_active">
                         <!-- BOOKMARK ITEM VIDEO-->
-                        <div class="column column_media column_bookmark bookmark_video">
+                        <div class="column column_media column_bookmark bookmark_next">
                             <div class="column_inner">
 
                                 <!-- Thumbnail -->
@@ -95,41 +99,10 @@
     </div>
     <!-- wapper_landing -->
 </body>
-<script>
-    jQuery(document).ready(function() {
-        if (Modernizr.touch) {}
-        else{
-            jQuery('.button_back').hover(function(){
-                jQuery(this).closest('.column_inner').find('.button_back_highlight').show();
-                }, function() {
-                    jQuery(this).closest('.column_inner').find('.button_back_highlight').hide();
-                });
-        }
-       
-    })
-</script>
-<script type='text/javascript'>
-    $('.bookmark_item_menu').each(function() {
-        $(this).load('templates/bookmark_item_menu.html', function() {
-            $('.page_menu').click(function() {
-                $(this).next().show();
-                return false;
-            })
-            $('.media_menu_touch_clickregion').click(function() {
-                $(this).closest('.column_inner').find('.media_menu_popup').show();
-                return false;
-            })
-            $('.button_close').click(function() {
-                $(this).parent().hide();
 
-            })
-            $('.button_back').hover(function(){
-                $(this).closest('.column_inner').find('.button_back_highlight').show();
-            }, function() {
-                $(this).closest('.column_inner').find('.button_back_highlight').hide();
-            });
-        });
-    });
+<script type='text/javascript'>
+    moment.loadResource('js/templates/hover.back.button.js', 'js');
+    moment.loadResource('js/templates/bookmark.menu.items.js', 'js');
 </script>
 
 </html>

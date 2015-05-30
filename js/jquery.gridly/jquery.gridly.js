@@ -414,6 +414,7 @@ Copyright 2015 Kevin Sylvestre
           left: position.x,
           top: position.y
         });
+        this.reordinalize($element, _i);        
       }
       return this.$el.css({
         height: structure.height
