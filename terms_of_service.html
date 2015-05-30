@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+    <title>Terms Of Service</title>
+
+    <link rel="shorcut icon" href="images/moment_icon.ico" type="images/moment_icon">
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- jQuery -->
+</head>
+
+<body class="terms_of_service-body">
+
+    <!-- HEADER -->
+    <header>
+        <!-- HEADER -->
+        <div class="header_container">
+            <div class="inner container_active">
+
+                <!-- Back Button -->
+                <div class="column column_1">
+                    <div class="column_inner container_active">
+                        <a class="button_back button_back_full floatLeft" href="profile_playlist.html"></a>
+                        <a class="button_back_highlight button_back_highlight_full floatLeft" href="javascript:void(0);"></a>
+                    </div>
+                </div>
+                <div class="column column_3 column_hide">
+                    <a href="#" class="ir">text</a>
+                </div>
+                <div class="column column_3 column_hide">
+                    <a href="#" class="ir">text</a>
+                </div>
+                <div class="column column_3 column_hide">
+                    <a href="#" class="ir">text</a>
+                </div>
+                <div class="column column_3 column_hide">
+                    <a href="#" class="ir">text</a>
+                </div>
+
+            </div>
+        </div>  <!-- header_container -->
+
+    </header> <!-- header -->
+
+    <div id="main">
+    <!-- GRID -->
+        <div class="grid">
+            <div class="grid_container">
+                <div class="grid_container_inner">
+                    <div class="content container_active">
+
+                        <div class="sectionheader">
+                            <h2>Stack Exchange Network Terms of Service</h2>
+                        </div>
+
+                        <div class="sectionbody">
+                            <h3 id="ANotefromtheTeam">A Note from the Team</h3>
+
+                            <p>The Stack Exchange Network is the easiest way to get expert answers to your questions. We created it to give everyone a chance to be recognized by their peers: recognized for their knowledge, their passion, and their willingness to help others get better at the things they are passionate about. We do ask that you treat our service and community with respect. Spam, personal attacks, and abusive language do not have a place on the Stack Exchange Network. If you ever stumble across anything on the Stack Exchange Network that looks like it violates our policies, please be sure to <a title="Send e-mail to the Stack Exchange team" href="mailto:team@stackexchange.com">let us know</a>.</p>
+                        </div>
+                    </div> <!-- content container_active -->
+                </div> <!-- grid_container_inner -->
+            </div> <!-- grid_container -->
+        </div> <!-- grid -->
+    </div> <!-- main -->
+
+    <footer>
+        <script>
+            jQuery(document).ready(function() {
+                jQuery('.page_menu').click(function() {
+                    jQuery(this).next().show();
+                    return false;
+                })
+                jQuery('.media_menu_touch_clickregion').click(function() {
+                    jQuery(this).closest('.column_inner').find('.media_menu_popup').show();
+                    return false;
+                })
+                jQuery('.button_close').click(function() {
+                    jQuery(this).parent().hide();
+
+                })
+                jQuery('.button_back').hover(function(){
+                    jQuery(this).closest('.column_inner').find('.button_back_highlight').show();
+                }, function() {
+                    jQuery(this).closest('.column_inner').find('.button_back_highlight').hide();
+                });
+            })
+        </script>
+        <script type='text/javascript'>
+            $('.introduction').each(function() {
+                $(this).load('templates/introduction.html', function() {
+                    $("#close_title").on("click tap", function(event) {
+                        event.preventDefault();
+                        $('.introduction').hide();
+                    });
+                });
+            });
+        </script>
+        <script type='text/javascript'>
+            $('.playlist_item_menu').each(function() {
+                $(this).load('templates/playlist_item_menu.html');
+            });
+        </script>
+        <script type='text/javascript'>
+            $('.bookmark_item_menu').each(function() {
+                $(this).load('templates/bookmark_item_menu.html');
+            });
+        </script>
+    </footer>
+
+</body>
+</html>

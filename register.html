@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <title>Register</title>
+    <link rel="shorcut icon" href="images/moment_icon.ico" type="images/moment_icon">
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+    <!-- Our Moment extension -->
+    <script type="text/javascript" src="js/moment/moment.js"></script>
+
+    </script>
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- jQuery -->
+</head>
+
+<body class="register-body">
+
+    <header>
+        <!-- HEADER -->
+        <div class="header_container">
+            <div class="inner container_active">
+
+                <!-- Logo -->
+                <div class="column column_1">
+                    <div class="column_inner">
+                        <h1 class="logo"><a href="playlist.html">#moment</a></h1>
+                    </div>
+                </div>
+
+                <!-- Page Title -->
+                <div class="column column_2 hide_tablet">
+                    <div class="column_inner">
+                        <h2 class="page_title">Register</h2>
+                    </div>
+                </div>
+
+                <!-- Search -->
+                <div class="column column_3and4">
+                    <div class="column_inner">
+                        <div class="search_form">
+                            <form class="">
+                                <input type="search" placeholder="search">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Log In -->
+                <div class="column column_5">
+                    <div class="column_inner">
+                        <a href="profile_history.html" class="button_generic"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div> <!-- header_container -->
+
+        <!-- INTRODUCTION -->
+        <div class='introduction'></div>
+
+    </header>
+
+    <div id="main">
+
+        <!-- GRID -->
+        <div class="grid">
+            <div class="grid_container">
+                <div class="grid_container_inner">
+                    <div class="content container_active">
+
+                        <div class="register_div">
+                            <h2 class="title">Sign up using any of the following services:</h2>
+                            <div id="openid-buttons">
+                                <div class="preferred-login google-login">
+                                    <p>
+                                        <span class="icon"></span>
+                                        <span>Sign up using Google</span>
+                                    </p>
+                                </div>
+                                <div class="preferred-login facebook-login">
+                                    <p>
+                                        <span class="icon"></span>
+                                        <span>Sign up using Facebook</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="email-login" class="preferred-login">
+                                <form id="email-login-form">
+                                    <input name="fkey" value="" type="hidden">
+                                    <div id="email-signup-legend">
+                                        <p>
+                                            <span class="icon email-signup"></span>
+                                            <span>Sign up using Email</span>
+                                        </p>
+                                    </div>
+                                    <div class="form-bottom">
+                                        <div>
+                                            <input id="display-name" name="display-name" placeholder="Name (your public display name)" size="30" maxlength="100" type="text">
+                                        </div>
+                                        <div>
+                                            <input name="email" placeholder="Email (required, but never shown)" size="30" maxlength="100" type="email">
+                                        </div>
+                                        <div style="position: relative;">
+                                            <input name="password" placeholder="Password" value="" type="password">
+
+                                            <div class="message message-info">
+                                                <div class="message-inner message-tip message-tip-left-top">
+                                                    <div class="message-text">
+                                                        <p>Password must contain at least eight unique characters, including:</p>
+                                                        <ul>
+                                                            <li> uppercase letters </li>
+                                                            <li> lowercase letters </li>
+                                                            <li> numbers or symbols </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div><input name="password2" placeholder="Confirm password" value="" type="password"></div>
+                                        <div class="form-submit cbt">
+                                            <input id="submit-button" name="submit-button" value="Sign Up" type="button">
+                                        </div>
+                                    </div>
+
+                                    <p class="privacy-policy-agreement">
+                                    By registering, you agree to the <a href="privacy_policy.html" target="_blank">privacy policy</a> and <a href="terms_of_service.html" target="_blank">terms of service</a>.</p>
+                                    <input name="legalLinksShown" value="1" type="hidden">
+                                </form>
+                            </div>
+                            <a id="more-options-link">More sign up options</a>
+                        </div>
+
+                    </div> <!-- content container_active -->
+                </div> <!-- grid_container_inner -->
+            </div> <!-- grid_container -->
+        </div> <!-- grid -->
+    </div> <!-- main -->
+
+    <footer>
+    </footer>
+    <script>
+        if(moment.isMobile()) {
+           moment.loadResource('css/mobile.css', 'css');
+        }
+        moment.loadResource('js/templates/introduction.js', 'js');
+        moment.loadResource('js/templates/playlist.menu.items.js', 'js');
+    </script>
+
+</body>
+</html>
